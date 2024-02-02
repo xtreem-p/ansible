@@ -1,0 +1,13 @@
+- name: update systems
+  hosts: Hass
+  become: true
+  become_user: root
+  become_method: sudo
+
+  tasks:
+  - apt:
+      name: "*"
+      state: latest
+      force_apt_get: true
+      update_cache: true
+      autoremove: true
