@@ -1,6 +1,6 @@
 ---
 - name: install wireguard
-  hosts: Hass
+  hosts: all
   become: yes
   tasks:
     - name: install wireguard
